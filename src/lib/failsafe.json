@@ -1,0 +1,39 @@
+{
+  "recipe": {
+    "title": "Moong Dal Khichdi Failsafe",
+    "description": "Universal, easily digestible Khichdi that bypasses most constraints.",
+    "prepTime": "15m",
+    "cookTime": "30m",
+    "totalTime": "45m",
+    "ingredients": [
+      { "item": "Moong Dal", "amount": "1 cup", "category": "Produce" },
+      { "item": "Basmati Rice", "amount": "1 cup", "category": "Produce" },
+      { "item": "Ghee (or Vegan Oil)", "amount": "2 tbsp", "category": "Dairy" },
+      { "item": "Cumin Seeds", "amount": "1 tsp", "category": "Spices" },
+      { "item": "Turmeric", "amount": "0.5 tsp", "category": "Spices" },
+      { "item": "Salt", "amount": "to taste", "category": "Spices" }
+    ],
+    "steps": [
+      { "text": "Wash dal and rice together until water runs clear." },
+      { "text": "Heat ghee or oil in a pressure cooker. Add cumin seeds." },
+      { 
+        "text": "IF DAIRY ALLERGY OR VEGAN: Use neutral oil instead of Ghee before progressing.", 
+        "isBranch": true, 
+        "targetProfile": "Vegan/Dairy-Allergy" 
+      },
+      { "text": "Add turmeric, washed dal, rice, and salt. Sauté for 2 mins." },
+      { "text": "Add 6 cups of water. Pressure cook for 4 whistles." },
+      { 
+        "text": "FOR DADA (DIABETES): Remove 1 bowl before adding extra tadka (tempering).", 
+        "isBranch": true, 
+        "targetProfile": "Diabetes"
+      },
+      { "text": "Let pressure release naturally, mix well and serve warm." }
+    ],
+    "nutrition": [
+      { "profileRef": "User 1", "calories": 420, "protein": "15g", "carbs": "60g", "fat": "8g" },
+      { "profileRef": "User 2", "calories": 380, "protein": "14g", "carbs": "55g", "fat": "7g" }
+    ],
+    "validation": "Cleared for Diabetes (portion control), Gluten Free, Nut Allergy. Needs oil sub for Dairy."
+  }
+}
